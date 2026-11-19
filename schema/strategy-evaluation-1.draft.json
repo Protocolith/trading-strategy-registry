@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Protocolith/trading-strategy-registry/schema/strategy-evaluation-1.draft.json",
+  "title": "strategy-evaluation/1 (draft)",
+  "type": "object",
+  "required": ["schema_version", "catalog_id", "visibility", "taxonomy", "protocol", "evaluation"],
+  "properties": {
+    "schema_version": {"const": "strategy-evaluation/1"},
+    "catalog_id": {"type": "string", "pattern": "^MN-[A-Z]{2,5}-[A-Z]{2,5}-[0-9]{3}$"},
+    "visibility": {"enum": ["public", "result-only"]},
+    "taxonomy": {
+      "type": "object",
+      "properties": {
+        "return_source": {"type": "string"},
+        "signal": {"type": "string"},
+        "structure": {"type": "string"},
+        "asset_class": {"type": "string"},
+        "instrument": {"type": "string"},
+        "horizon": {"type": "string"},
+        "rules_version": {"type": "string"}
+      }
+    },
+    "protocol": {
+      "type": "object",
+      "required": ["preregistration_sha256", "data_manifest_sha256", "n_trials", "splits"],
+      "properties": {
+        "preregistration_sha256": {"type": "string"},
+        "data_manifest_sha256": {"type": "string"},
+        "spec_sha256": {"type": ["string", "null"]},
+        "n_trials": {"type": "integer", "minimum": 1},
+        "splits": {"type": "object"},
+        "holdout_opened": {"type": ["string", "null"], "description": "date the holdout was opened, once"}
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["verifier", "verifier_version", "arl_rules_version", "verdict", "arl_level"],
+      "properties": {
+        "verifier": {"const": "monte-neo"},
+        "verifier_version": {"type": "string"},
+        "arl_rules_version": {"type": "string"},
+        "verdict": {"enum": ["PASS", "PASS_WITH_WARNINGS", "NEEDS_MORE_EVIDENCE", "REJECT"]},
+        "arl_level": {"type": "integer", "minimum": 1, "maximum": 9},
+        "arl_depth": {"type": "integer", "minimum": 0, "maximum": 4},
+        "metrics": {"type": "object"},
+        "certificate_id": {"type": "string"}
+      }
+    },
+    "license": {"type": "string", "default": "CC-BY-4.0"}
+  }
+}
