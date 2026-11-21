@@ -10,6 +10,26 @@ Reproducible, pre-registered evaluations of trading strategies, recorded on a ta
 
 **Status:** under construction. The record schema is a draft.
 
+## Try a strategy yourself in five minutes
+
+Records with public code can be imported into [Monte-Neo](https://github.com/NeoZorK/Monte-Neo), re-verified on
+public data on your machine, and run as a forward record on the Binance spot demo testnet:
+
+```bash
+pip install monte-neo                       # Python 3.11+
+monte-neo registry list                     # what is in the registry
+monte-neo registry show MN-TSM-CRY-002      # the evaluation and why it passed or failed
+monte-neo registry try MN-TSM-CRY-002       # download, check every hash against the ledger, re-run the verification
+monte-neo deploy init --strategy strategies/MN-TSM-CRY-002/strategy.py \
+  --certificate strategies/MN-TSM-CRY-002/certificate.json --symbols BTCUSDT --rebalance daily --mode dry
+monte-neo deploy run                        # a dry forward record with a dashboard: monte-neo deploy serve
+```
+
+Every imported file is checked against `index.json` and against this ledger, so what you run is exactly what was
+evaluated. Step by step: [docs/try.md](docs/try.md).
+
+If this is useful, a star on [Monte-Neo](https://github.com/NeoZorK/Monte-Neo) and on this repository helps others find it.
+
 ## Records
 
 | Id | Strategy | Verdict (full period) | Pre-registered gate | Result |
@@ -35,6 +55,8 @@ the verdict and the certificate are public.
 ## Layout
 
 ```
+index.json   one entry per record with its files and their SHA-256 (read by `monte-neo registry`)
+strategies/  public reference code of a record, when the author publishes it (licence in the file)
 specs/    strategy specifications (one JSON file per catalog id, e.g. MN-TSM-FX-001.spec.json)
 ledger/   Protocolith ledger (freeze and record entries)
 schema/   JSON schema of an evaluation record (draft: strategy-evaluation/1)

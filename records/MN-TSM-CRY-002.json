@@ -1,0 +1,30 @@
+{
+ "schema_version": "strategy-evaluation/1",
+ "catalog_id": "MN-TSM-CRY-002",
+ "visibility": "public",
+ "taxonomy": {"return_source": "trend premium", "signal": "breakout (Donchian channel)", "structure": "single asset",
+  "asset_class": "crypto", "instrument": "spot", "horizon": "days to weeks", "rules_version": "catalog-rules/1"},
+ "protocol": {
+  "preregistration_sha256": "0c0bcf97ca9919b67ca0cbe6b6162676440a4bbc4f808471cdeefdf76cf8dc61",
+  "data_manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+  "spec_sha256": null,
+  "n_trials": 83,
+  "splits": {"discovery": "2017-08..2020-12", "validation": "2021-01..2024-12", "holdout": "2025-01.. (not opened)"},
+  "holdout_opened": null
+ },
+ "evaluation": {
+  "verifier": "monte-neo",
+  "verifier_version": "0.54.0",
+  "arl_rules_version": "arl-rules/1",
+  "verdict": "NEEDS_MORE_EVIDENCE",
+  "arl_level": 4,
+  "certificate_id": "bf5c4588371d70de",
+  "metrics": {"sharpe_full_pre_holdout": 1.30, "deflated_sharpe_83_trials": 0.856, "closed_trades": 22,
+              "validation_net_sharpe": 0.97, "validation_net_sharpe_costs_x2": 0.94, "validation_max_drawdown": -0.39,
+              "validation_beta_share_btc": 0.35, "btc_buy_and_hold_sharpe": 0.78},
+  "gate": {"name": "Strategy Lab admission to the holdout", "criteria": "ARL >= 6 with depth >= 2 and Deflated Sharpe >= 0.95 at the worst phase",
+           "passed": false, "why": "ARL 4 (residual alpha and hidden short volatility not run), 22 closed trades (minimum 30), Deflated Sharpe 0.86"}
+ },
+ "outcome_summary": "A classic rule that beat buy and hold on BTC before 2025 but did not earn admission to the sealed holdout: too few trades and not significant after 83 trials. Importable and deployable as an example to try.",
+ "license": "CC-BY-4.0"
+}
