@@ -1,0 +1,36 @@
+{
+ "schema_version": "strategy-evaluation/1",
+ "catalog_id": "MN-ALC-MLT-001",
+ "visibility": "public",
+ "taxonomy": {"return_source": "trend and risk premia", "signal": "time-series momentum, inverse volatility, carry", "structure": "portfolio of three sleeves", "asset_class": "multi-asset", "instrument": "ETF", "horizon": "monthly rebalance", "rules_version": "catalog-rules/1"},
+ "protocol": {
+  "preregistration_sha256": "e40c594c4d98775b28d7e0729bfc1eafa4d9bcb2655dd1a99513e92864d3b50e",
+  "data_manifest_sha256": "96a72a08d4513f716a7fc1b1ea7e3d83e3f7722be77686ca0a734a75ee0bcfd1",
+  "spec_sha256": null,
+  "n_trials": 17,
+  "splits": {"discovery": "2008-04..2014-12", "validation": "2015-01..2020-12", "holdout": "2021-01..2026-11"},
+  "holdout_opened": "2026-11-21"
+ },
+ "evaluation": {
+  "verifier": "monte-neo",
+  "verifier_version": "0.53.2 (returns certificate)",
+  "arl_rules_version": "not assessed (returns only)",
+  "verdict": "NEEDS_MORE_EVIDENCE",
+  "arl_level": 1,
+  "certificate_id": "aed1183ac90a84d7",
+  "metrics": {
+   "validation_net_sharpe": 0.756,
+   "holdout_net_sharpe": 0.74,
+   "holdout_net_sharpe_costs_x2": 0.704,
+   "holdout_cagr": 0.0243,
+   "holdout_vol": 0.0333,
+   "holdout_max_drawdown": -0.0413,
+   "holdout_beta_spy": 0.117,
+   "holdout_psr": 0.963,
+   "holdout_dsr_17_trials": 0.483
+  },
+  "gate": {"name": "personal-gate/1 (etf-book-gate-1)", "criteria": "verdict not REJECT; holdout net Sharpe at doubled costs >= 0.30; max drawdown >= -20 %", "passed": true}
+ },
+ "outcome_summary": "Passed its pre-registered holdout gate with a small, steady return (2.4 % a year at 3.3 % volatility); not yet significant after 17 trials. Forward record of the three sleeves runs from 2026-11-10.",
+ "license": "CC-BY-4.0"
+}

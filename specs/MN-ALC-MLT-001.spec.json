@@ -1,0 +1,14 @@
+{
+ "catalog_id": "MN-ALC-MLT-001",
+ "name": "Multi-asset ETF book: 1/3 time-series trend, 1/3 risk parity, 1/3 bond trend-carry",
+ "rules": {
+  "universe": "16 US-listed ETFs: SPY QQQ IWM EFA EEM TLT IEF SHY LQD HYG GLD SLV DBC USO UUP VNQ",
+  "trend": "12-month time-series momentum per ETF, 60-day volatility scaling to 40 % per asset, 10 % portfolio target (Moskowitz, Ooi, Pedersen 2012)",
+  "risk_parity": "inverse 60-day volatility weights (Asness, Frazzini, Pedersen 2012)",
+  "bond_trend_carry": "12-month trend and carry across the bond ETFs (Asness, Moskowitz, Pedersen 2013)",
+  "book": "1/3 of capital to each component; monthly rebalance on the last weekday; next-bar execution; leverage cap 1 per component",
+  "costs": "3 bps per side, 50 bps per year borrow; the gate also uses doubled costs"
+ },
+ "params": "literature defaults, no parameter chosen from the data",
+ "data_manifest": {"source": "daily adjusted closes of the 16 ETFs", "range": ["2007", "2026-11"], "manifest_sha256": "96a72a08d4513f716a7fc1b1ea7e3d83e3f7722be77686ca0a734a75ee0bcfd1"}
+}

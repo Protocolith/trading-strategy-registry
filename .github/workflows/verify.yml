@@ -1,0 +1,21 @@
+name: Verify ledger
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+      - name: Check the Protocolith ledger chain
+        run: uvx --from 'protocolith==0.7.0' protocolith verify-ledger --store ledger
+      - name: Check records and specs
+        run: python3 tools/check_records.py
