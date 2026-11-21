@@ -1,0 +1,16 @@
+{
+ "catalog_id": "MN-TSM-CRY-002",
+ "name": "Donchian breakout 55/20, BTC (long only)",
+ "rules": {
+  "universe": "BTCUSDT, Binance spot",
+  "entry": "close above the highest close of the previous 55 days: hold BTC",
+  "exit": "close below the lowest close of the previous 20 days: go to cash",
+  "execution": "next bar; costs 10 bps commission + 5 bps slippage per side"
+ },
+ "params": {"entry": 55, "exit": 20, "grid_checked": {"entry": [20, 40, 55], "exit": [10, 20]}},
+ "code": {"path": "strategies/MN-TSM-CRY-002/strategy.py", "sha256": "2671e498862be921e5cbd6b0013749df438061cfc3049856d6cf4071b2c212fa", "license": "MIT", "interfaces": ["signal", "target_weights"]},
+ "data": {"source": "binance-spot-daily", "symbols": ["BTCUSDT"], "start": "2017-08-17", "end": "2024-12-31",
+          "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"},
+ "try": {"verify": {"n_trials": 83, "fee_bps": 10, "slippage_bps": 5}},
+ "deploy": {"binance_spot_testnet": true, "rebalance": "daily", "symbols": ["BTCUSDT"]}
+}

@@ -1,0 +1,119 @@
+{
+ "ledger_head": "01d722796f30373d3ff4c7157d587c0ab055a62dbf2ebfd268516864b252f7c2",
+ "raw_base": "https://raw.githubusercontent.com/Protocolith/trading-strategy-registry/main/",
+ "records": [
+  {
+   "arl": 1,
+   "asset_class": "multi-asset",
+   "data": null,
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-ALC-MLT-001.json",
+     "sha256": "94e5f108fa35be36fae1e53d0528396d28d49de2102e728df04ba8fcab77408f"
+    },
+    "spec": {
+     "path": "specs/MN-ALC-MLT-001.spec.json",
+     "sha256": "951150214a5e3801887a5bfee883f35a80a0df292b0a8e7148eb3f6570333910"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-ALC-MLT-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Multi-asset ETF book: 1/3 time-series trend, 1/3 risk parity, 1/3 bond trend-carry",
+   "signal": "time-series momentum, inverse volatility, carry",
+   "summary": "Passed its pre-registered holdout gate with a small, steady return (2.4 % a year at 3.3 % volatility); not yet significant after 17 trials. Forward record of the three sleeves runs from 2026-11-10.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 5,
+   "asset_class": "crypto",
+   "data": null,
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-TSM-CRY-001.json",
+     "sha256": "75d6045613580ecbc01d357b78b01634a0a02ff9d569c76e65152e4fc55ba9d6"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-001.spec.json",
+     "sha256": "9d164112badc39385a29f79088ad3cc762ab7863a9b57f222576ef84bace1793"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-TSM-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Donchian channel position basket, 18 crypto spot pairs",
+   "signal": "time-series momentum (channel position)",
+   "summary": "Failed the pre-registered holdout gate: no edge after costs in 2025-2026; the family is closed.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 4,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-spot-daily",
+    "start": "2017-08-17",
+    "symbols": [
+     "BTCUSDT"
+    ]
+   },
+   "deploy": {
+    "binance_spot_testnet": true,
+    "rebalance": "daily",
+    "symbols": [
+     "BTCUSDT"
+    ]
+   },
+   "files": {
+    "code": {
+     "path": "strategies/MN-TSM-CRY-002/strategy.py",
+     "sha256": "2671e498862be921e5cbd6b0013749df438061cfc3049856d6cf4071b2c212fa"
+    },
+    "record": {
+     "path": "records/MN-TSM-CRY-002.json",
+     "sha256": "686efc0040b8ff1ef0926da71ddd9d217731ecc7b6d0945e7eac6adb5c53b035"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-002.spec.json",
+     "sha256": "d3fb8e5bd94a665285519e50cdf4bb4d9ccadc79b70a7b434053884bfba07d44"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-TSM-CRY-002",
+   "importable": true,
+   "interfaces": [
+    "signal",
+    "target_weights"
+   ],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Donchian breakout 55/20, BTC (long only)",
+   "signal": "breakout (Donchian channel)",
+   "summary": "A classic rule that beat buy and hold on BTC before 2025 but did not earn admission to the sealed holdout: too few trades and not significant after 83 trials. Importable and deployable as an example to try.",
+   "try": {
+    "verify": {
+     "fee_bps": 10,
+     "n_trials": 83,
+     "slippage_bps": 5
+    }
+   },
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  }
+ ],
+ "repository": "https://github.com/Protocolith/trading-strategy-registry",
+ "schema": "registry-index/1"
+}

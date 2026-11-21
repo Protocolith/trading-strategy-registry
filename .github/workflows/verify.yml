@@ -17,5 +17,7 @@ jobs:
       - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
       - name: Check the Protocolith ledger chain
         run: uvx --from 'protocolith==0.7.0' protocolith verify-ledger --store ledger
-      - name: Check records and specs
+      - name: Check records, specs and code
         run: python3 tools/check_records.py
+      - name: Check that index.json is current
+        run: python3 tools/build_index.py --check

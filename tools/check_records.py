@@ -35,6 +35,16 @@ def main() -> int:
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         if digest not in ledger:
             problems.append(f"{path.name}: sha256 {digest[:12]} is not referenced by any ledger record")
+    for sp in sorted((ROOT / "specs").glob("*.spec.json")):
+        code = json.loads(sp.read_text(encoding="utf-8")).get("code")
+        if code:
+            cp = ROOT / code["path"]
+            if not cp.exists():
+                problems.append(f"{sp.name}: code file {code['path']} is missing")
+            elif hashlib.sha256(cp.read_bytes()).hexdigest() != code["sha256"]:
+                problems.append(f"{sp.name}: {code['path']} does not match its sha256 in the spec")
+            elif code["sha256"] not in ledger:
+                problems.append(f"{sp.name}: the code's sha256 is not referenced by any ledger record")
     for p in problems:
         print(p)
     print(f"{len(records)} records, {len(problems)} problems")
