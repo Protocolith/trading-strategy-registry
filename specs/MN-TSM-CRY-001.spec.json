@@ -1,0 +1,24 @@
+{
+ "catalog_id": "MN-TSM-CRY-001",
+ "name": "Donchian channel position basket, 18 crypto spot pairs",
+ "rules": {
+  "universe": "18 Binance USDT spot pairs with daily history from 2017 (list fixed before discovery; survivorship tested separately with 12 delisted pairs)",
+  "score": "position of the daily close inside the Donchian channel of the previous 55 closes (channel lagged one day), minus 0.5",
+  "portfolio": "cross-sectional basket built from the scores by the Monte-Neo alpha path, held for 7 days",
+  "costs": "spot fees and spread of the Monte-Neo crypto profile; the gate also uses doubled costs"
+ },
+ "params": {
+  "window": 55,
+  "horizon": 7
+ },
+ "strategy_sha256": "476beabb548c93111f78b204c25031f3be4334da6f79569b8c618eccce3dc1d4",
+ "data_manifest": {
+  "source": "https://data.binance.vision/data",
+  "range": [
+   "2017-08",
+   "2026-10"
+  ],
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+  "note": "the manifest lists every source file with its sha256; market data is not published here"
+ }
+}

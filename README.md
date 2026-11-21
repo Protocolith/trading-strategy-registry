@@ -8,8 +8,13 @@ Reproducible, pre-registered evaluations of trading strategies, recorded on a ta
 > **Not investment advice. No trading signals.** An entry says how much evidence a backtest
 > carries under a stated protocol, not that a strategy will make money.
 
-**Status:** under construction. The record schema is a draft; the first records follow the
-Monte-Neo v0.55 release.
+**Status:** under construction. The record schema is a draft.
+
+## Records
+
+| Id | Strategy | Verdict (full period) | Pre-registered gate | Result |
+|---|---|---|---|---|
+| [MN-TSM-CRY-001](records/MN-TSM-CRY-001.json) | Donchian channel basket, 18 crypto spot pairs | PASS_WITH_WARNINGS, ARL 5 | holdout 2025-01..2026-10, net Sharpe at 2x costs > 0 | **failed** (Sharpe -0.06 at 2x costs) |
 
 ## What is stored
 

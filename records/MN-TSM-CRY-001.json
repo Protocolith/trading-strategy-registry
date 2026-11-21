@@ -1,0 +1,48 @@
+{
+ "schema_version": "strategy-evaluation/1",
+ "catalog_id": "MN-TSM-CRY-001",
+ "visibility": "public",
+ "taxonomy": {
+  "return_source": "trend premium",
+  "signal": "time-series momentum (channel position)",
+  "structure": "basket",
+  "asset_class": "crypto",
+  "instrument": "spot",
+  "horizon": "weekly rebalance",
+  "rules_version": "catalog-rules/1"
+ },
+ "protocol": {
+  "preregistration_sha256": "04691687af3b2f8eb3affdfa76df787368d7501e7ab733cf50bc03e61614d391",
+  "data_manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+  "spec_sha256": "ed3cbf52fc8cb09313c9c4aa196713489569212d3b5f38b54c160a59ad3b71f8",
+  "n_trials": 134,
+  "splits": {"discovery": "2017-08..2020-12", "validation": "2021-01..2024-12", "holdout": "2025-01..2026-10"},
+  "holdout_opened": "2026-11-20"
+ },
+ "evaluation": {
+  "verifier": "monte-neo",
+  "verifier_version": "0.55.0-dev",
+  "arl_rules_version": "arl-rules/1",
+  "verdict": "PASS_WITH_WARNINGS",
+  "arl_level": 5,
+  "arl_depth": 3,
+  "certificate_id": "5c972ea55ec37172",
+  "metrics": {
+   "validation_net_sharpe": 1.568,
+   "validation_deflated_sharpe": 0.742,
+   "holdout_net_sharpe": -0.015,
+   "holdout_net_sharpe_costs_x2": -0.064,
+   "holdout_total_return": -0.0852,
+   "holdout_max_drawdown": -0.3506,
+   "holdout_beta_btc": 0.342,
+   "holdout_btc_buyhold_sharpe": -0.024
+  },
+  "gate": {
+   "name": "personal-gate/1",
+   "criteria": "verdict not REJECT; holdout net Sharpe at doubled costs > 0; max drawdown >= -45 %",
+   "passed": false
+  }
+ },
+ "outcome_summary": "Failed the pre-registered holdout gate: no edge after costs in 2025-2026; the family is closed.",
+ "license": "CC-BY-4.0"
+}
