@@ -1,0 +1,37 @@
+{
+ "catalog_id": "MN-XSM-CRY-032",
+ "name": "Cross-sectional momentum, 10 USDT spot coins",
+ "rules": {
+  "universe": "BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LTCUSDT, LINKUSDT, DOGEUSDT, TRXUSDT",
+  "family": "cross_section",
+  "title": "Cross-sectional momentum, 10 USDT spot coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "horizon": 7
+ },
+ "params": {
+  "lookback": 60,
+  "skip": 1,
+  "horizon": 7,
+  "grid_checked": {
+   "lookback": [
+    30,
+    60,
+    90
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/xs_momentum_spot/strategy.py",
+  "sha256": "23bf5918cc3558ce939117ae44cc9b6746cd8fd6f1fc6f0cc1cf9f48580282bd",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

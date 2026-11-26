@@ -1,5 +1,5 @@
 {
- "ledger_head": "01d722796f30373d3ff4c7157d587c0ab055a62dbf2ebfd268516864b252f7c2",
+ "ledger_head": "e24ae42c2f4a7498629a4be3bd0be66ed00ad13430e14ea40ee9704926d89dff",
  "raw_base": "https://raw.githubusercontent.com/Protocolith/trading-strategy-registry/main/",
  "records": [
   {
@@ -28,6 +28,652 @@
    "name": "Multi-asset ETF book: 1/3 time-series trend, 1/3 risk parity, 1/3 bond trend-carry",
    "signal": "time-series momentum, inverse volatility, carry",
    "summary": "Passed its pre-registered holdout gate with a small, steady return (2.4 % a year at 3.3 % volatility); not yet significant after 17 trials. Forward record of the three sleeves runs from 2026-11-10.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 1,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-CAR-CRY-001.json",
+     "sha256": "374748490937a2c1092c4e11c5bdbfcbddb7f5acb04762b0265c2772fc92622d"
+    },
+    "spec": {
+     "path": "specs/MN-CAR-CRY-001.spec.json",
+     "sha256": "ff28cb5ad1da55adaee6615ad46f8b1600b3598d8a31cc7d86ae917484325a5d"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-CAR-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Funding carry: long spot / short perpetual basket",
+   "signal": "perpetual funding carry (long spot, short perpetual)",
+   "summary": "PASS_WITH_WARNINGS, ARL 1: validation net Sharpe 5.69 (doubled-cost Sharpe not computed for this strategy, max drawdown -3 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 1,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-CAR-CRY-002.json",
+     "sha256": "b5c3ef44adea7745e008b871ad07471eb037e10ad09c65b48ac5a4badb9eb0d8"
+    },
+    "spec": {
+     "path": "specs/MN-CAR-CRY-002.spec.json",
+     "sha256": "a78eeed2803a37a88b7148c943683d699766d7422585b1b9eb726ed24a42e4ea"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-CAR-CRY-002",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Funding carry v2: long spot / short perpetual, 12 coins, per-coin costs",
+   "signal": "perpetual funding carry (long spot, short perpetual)",
+   "summary": "PASS_WITH_WARNINGS, ARL 1: validation net Sharpe 6.67 (5.00 at doubled costs, max drawdown -1 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-CAR-CRY-003.json",
+     "sha256": "3bfc43d03ed005aed9c7951f636bd02dbbd7c4a560918c3c142a725dc4d387ba"
+    },
+    "spec": {
+     "path": "specs/MN-CAR-CRY-003.spec.json",
+     "sha256": "4589cc7a31223c11a9ee606b250684ffc70d7ff9c92f1293ab9ee98aefdf00b9"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-CAR-CRY-003",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Funding crowding: short coins with the highest trailing perpetual funding, long the lowest (BTC-hedged)",
+   "signal": "perpetual funding crowding (long-short, BTC-hedged)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.78 (0.70 at doubled costs, max drawdown -45 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-FAC-CRY-001.json",
+     "sha256": "171edc3c305263a17b37cc3d82deb1493b4a67996ebd269bd19d55c345efde2a"
+    },
+    "spec": {
+     "path": "specs/MN-FAC-CRY-001.spec.json",
+     "sha256": "e8d0dbfb036125b15e14c817c817231d410b93cc69277d38aed17c32b6ffdecc"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-FAC-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Betting against beta: long low-beta, short high-beta coins (BTC-hedged)",
+   "signal": "betting against beta (long-short, BTC-hedged)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.20 (1.17 at doubled costs, max drawdown -41 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-FAC-CRY-002.json",
+     "sha256": "8714b92a74940f77fed4ebc5555a3e76d67f486fed96c0378afcd79279b9ab2d"
+    },
+    "spec": {
+     "path": "specs/MN-FAC-CRY-002.spec.json",
+     "sha256": "40b233ec8600ff1aed1b37ce78c21e6756334553a3b6319ff97ec97a0fa73b72"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-FAC-CRY-002",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Lottery effect: short coins with the largest recent daily jump, long the rest (BTC-hedged)",
+   "signal": "lottery effect: short the largest recent daily jumps (BTC-hedged)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe -0.81 (-0.90 at doubled costs, max drawdown -77 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-FAC-CRY-003.json",
+     "sha256": "49292c41dd995e075809aacc81b97e0e2c56f2cd785836dcab16bc8b949cb3d3"
+    },
+    "spec": {
+     "path": "specs/MN-FAC-CRY-003.spec.json",
+     "sha256": "86c8f8dc36e0e1d8cf2318198c3950b55de602a6246a971a5ce4d3f2fc8caf75"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-FAC-CRY-003",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 67cbd439: bab {'window': 30} sign -1, top 30 liquid coins",
+   "signal": "betting against beta, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.86 (0.69 at doubled costs, max drawdown -29 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-FAC-CRY-004.json",
+     "sha256": "73ba906c8dcb7914edcdcfd85775e3366511efeb5c8f2283751b4bbd07061f45"
+    },
+    "spec": {
+     "path": "specs/MN-FAC-CRY-004.spec.json",
+     "sha256": "0df11183d77b59bc9d143e0d314cc6600985bf129223f31e74008aaaa1570a3f"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-FAC-CRY-004",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 2fbb8ee2: bab2 {'window': 200} sign -1, top 30 liquid coins",
+   "signal": "betting against beta (long window), long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.13 (1.06 at doubled costs, max drawdown -30 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-FAC-CRY-005.json",
+     "sha256": "abdbde2ee87f3ae30181a332bc7bce23a632f7d010f7f265eae6ed363ce42bf3"
+    },
+    "spec": {
+     "path": "specs/MN-FAC-CRY-005.spec.json",
+     "sha256": "4ccc814ff4f0dd23e1cc4203f93ee7a1ef62a252ee8dbedd8e3769abb01f2d93"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-FAC-CRY-005",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate c36c6b3e: bab {'window': 30} sign -1, top 60 liquid coins",
+   "signal": "betting against beta, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe -0.55 (-0.76 at doubled costs, max drawdown -62 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-001.json",
+     "sha256": "84c55490a791816eef8a2f0a094f653c780a3eb08decf1b33f814a2e50380493"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-001.spec.json",
+     "sha256": "982aae9d1797ac1300bc66c811cc782cf85b5fd86712dd78229917e2a995951b"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Bollinger band reversion, ETH",
+   "signal": "Bollinger band reversion",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.44 (0.40 at doubled costs, max drawdown -58 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-002.json",
+     "sha256": "1749b79417eb265ca37335f6458a69568676aa8396db7bda42641d241d61d77f"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-002.spec.json",
+     "sha256": "40aec6d0f32b3800cfa23f9a0283a28d463bbfb6a019c5ab8265eca0e0ad9cba"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-002",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Short-term mean reversion basket, long-short, 18 coins",
+   "signal": "short-term reversal (long-short)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe -2.32 (-2.92 at doubled costs, max drawdown -91 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-003.json",
+     "sha256": "ebe3cedd6bab932e9fdc0f2bef34c1f4c37b3e7db9964a3c3bca19bb37e18595"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-003.spec.json",
+     "sha256": "9aa2083a29b89330282c4c34da588d18a2eb2f27578d59ba56b5ebb1adbc79b3"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-003",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "High-volume reversal: fade the 5-day move, stronger when volume is unusual (BTC-hedged)",
+   "signal": "high-volume short-term reversal (long-short, BTC-hedged)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe -1.10 (-1.55 at doubled costs, max drawdown -78 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-004.json",
+     "sha256": "3c86ff804f3bdaf5efaa7f964356a4adc9affd51ac6cfb9d0d8ecd0c61911c8e"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-004.spec.json",
+     "sha256": "5dbdbe54c701de60d3fa930c9e6bb8cbdd2debaebcb1104abf4497da0ff1b6de"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-004",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate f00bda81: rev {'lookback': 3} sign 1, top 60 liquid coins",
+   "signal": "short-term reversal, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.85 (0.56 at doubled costs, max drawdown -15 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-005.json",
+     "sha256": "c5145c8a223f890d4dd45df5104e26050f0bd71ae6aa1fad37bece0cf5853b89"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-005.spec.json",
+     "sha256": "787d5bc9b6797e7420a2588357f0f9291059f31a5306033b3999f0e87490b3c5"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-MR-CRY-005",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate f672efd5: strev {'lookback': 5, 'mode': 'volnorm'} sign 1, top 30 liquid coins",
+   "signal": "volume-normalised short-term reversal, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.48 (0.04 at doubled costs, max drawdown -48 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-006.json",
+     "sha256": "078c729e314ccb59897f545c634080e99b836393735c5d4b9308ebfee7c2092b"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-006.spec.json",
+     "sha256": "d2d4b720ec135f8e60dfac45b785c983d9e4b2f7fa2f78b66017eb9cf4b8ef40"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-006",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 1df4d9a2: rev {'lookback': 14} sign 1, top 60 liquid coins",
+   "signal": "short-term reversal, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe -0.03 (-0.38 at doubled costs, max drawdown -42 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-007.json",
+     "sha256": "67ce25188a77844bf4508610c576eb21131d281d97c310f043931c249aacb9b8"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-007.spec.json",
+     "sha256": "d2a70dca6d7691a081b1a44e34593868141d7407e045c923a454a750aea48894"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-007",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 2f0ff35f: strev {'lookback': 5, 'mode': 'volnorm'} sign 1, top 60 liquid coins",
+   "signal": "volume-normalised short-term reversal, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.53 (-0.01 at doubled costs, max drawdown -38 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-008.json",
+     "sha256": "675809639a0e055d1a0744f4381584118a664f97cfea019ada68555e50163a5f"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-008.spec.json",
+     "sha256": "5422b9cb3cd7a06388f19e9bdcd6a49d9c905ad87235e44bd45e5e495ce9c81f"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-008",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate d17472fd: strev {'lookback': 5, 'mode': 'volnorm'} sign 1, top 60 liquid coins",
+   "signal": "volume-normalised short-term reversal, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.73 (0.46 at doubled costs, max drawdown -29 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-MR-CRY-009.json",
+     "sha256": "29fce938bcc7fae611c957de39183de31ae867cd0b130ceece2d20012953918e"
+    },
+    "spec": {
+     "path": "specs/MN-MR-CRY-009.spec.json",
+     "sha256": "5ec2dfea187bbc04499d799a7b5acf2e5e77e8d46801cfc655152b546891e839"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-MR-CRY-009",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "RSI(2) mean reversion in an uptrend, BTC",
+   "signal": "RSI(2) reversion in an uptrend",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.10 (0.02 at doubled costs, max drawdown -43 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 1,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-SA-CRY-001.json",
+     "sha256": "ad21976864591b27a601559d400244c2facaba46ad254b096f7d5a15cc47b15a"
+    },
+    "spec": {
+     "path": "specs/MN-SA-CRY-001.spec.json",
+     "sha256": "48a054ad8a656540d0f0c923ae1e15605ad8a41cfe974b71766a3cd8d6aafb11"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-SA-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Pairs: ETH vs BTC log-price spread (perpetuals)",
+   "signal": "pairs (ETH vs BTC log-price spread)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 1: validation net Sharpe 0.00 (doubled-cost Sharpe not computed for this strategy, max drawdown -34 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-SEA-CRY-001.json",
+     "sha256": "f4edc21bc7dda8ba73a54fa12bdea09a1c5807be564a1dd9c22a3fbf0179e815"
+    },
+    "spec": {
+     "path": "specs/MN-SEA-CRY-001.spec.json",
+     "sha256": "2dd84cdcd3ad05d5063378e69afd7f2ba4b94401b8ac018b29bb38e9e9474501"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-SEA-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Turn-of-month seasonality, BTC",
+   "signal": "turn-of-month seasonality",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.43 (0.28 at doubled costs, max drawdown -32 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
    "try": null,
    "verdict": "NEEDS_MORE_EVIDENCE"
   },
@@ -111,6 +757,1230 @@
      "slippage_bps": 5
     }
    },
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-TSM-CRY-003.json",
+     "sha256": "e6405ed827a3030ab3fbe8e0aa33429a9137b9dfaab96e4e8c692ee0f0f94af6"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-003.spec.json",
+     "sha256": "649ddcb97131479661426a407dd5745aad38d15c7ddfe2ceb89dbb703b9eb8fa"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-TSM-CRY-003",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Trend basket: volatility-scaled time-series momentum, 18 coins",
+   "signal": "volatility-scaled time-series momentum",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.39 (1.38 at doubled costs, max drawdown -57 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-TSM-CRY-004.json",
+     "sha256": "2beeeb3f4f93851b46ec03209dde7b72d0108d170912f931785dbb52c30f94ee"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-004.spec.json",
+     "sha256": "0c67fddf8d451435895b7722dab7a1c927f7db6de95763e886d6d93e55d404a4"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-TSM-CRY-004",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "SMA trend filter, ETH",
+   "signal": "SMA trend filter",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.67 (0.63 at doubled costs, max drawdown -75 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-TSM-CRY-005.json",
+     "sha256": "c3e8bed5ffbc5e90d61183fb6d757315915d13bb68c42a2b887bc0770a6338d0"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-005.spec.json",
+     "sha256": "ce48c240ecc8791bf7705a9327e2517d832e2a3c0c9801558df890c6507f5cd7"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-TSM-CRY-005",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Time-series momentum, BTC",
+   "signal": "time-series momentum",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.83 (0.78 at doubled costs, max drawdown -58 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-TSM-CRY-006.json",
+     "sha256": "88cdb61448905687f3c408aeae937d02e8b94c0fc4d271159ab9bb0009635216"
+    },
+    "spec": {
+     "path": "specs/MN-TSM-CRY-006.spec.json",
+     "sha256": "1f08265be6df846f9424d4d7a811fa603849c7ae04e07df5f9afe9b5ac5f1f70"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-TSM-CRY-006",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Volatility-targeted trend, BTC",
+   "signal": "volatility-targeted trend",
+   "summary": "PASS_WITH_WARNINGS, ARL 3: validation net Sharpe 0.92 (0.86 at doubled costs, max drawdown -32 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-001.json",
+     "sha256": "f417bbfcecf3fbf291715e2044757158472b3bd2aa6a2ade207ec5f2b3e329c5"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-001.spec.json",
+     "sha256": "3ff63bdcec2df6c9c27cfe7b47d1b6439b2ec2d832515e0b46d5c28b02b34ea5"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-001",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Trend versus market: long-short on distance above SMA relative to BTC",
+   "signal": "trend relative to BTC (long-short, BTC-hedged)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.01 (0.93 at doubled costs, max drawdown -30 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-002.json",
+     "sha256": "98874be172eee57f9eb36aa5415e966a96d6052b1644d1b9b2350782b74e4099"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-002.spec.json",
+     "sha256": "1804ee9dcffeb282a0328e324b45c956f9df1e07a32ac63b106d9fc9d6b0168c"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-002",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "BTC-neutral residual momentum, long-short, 18 coins",
+   "signal": "residual momentum (long-short, BTC-hedged)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.88 (0.77 at doubled costs, max drawdown -20 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-003.json",
+     "sha256": "fac3f1f47bc4682d1a34bd940aa1756a30e0205f40bb8c4d4187b054189d0cab"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-003.spec.json",
+     "sha256": "006163f9dd8133296b36da9416c7e7bc228b6111c165ff1d5bd2b03e45aeaf06"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-003",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Long-term reversal: fade the 180-day loser/winner skipping the last month (BTC-hedged)",
+   "signal": "long-term reversal (long-short, BTC-hedged)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.79 (0.75 at doubled costs, max drawdown -22 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-004.json",
+     "sha256": "5411586adddbe2a0ec6482916c15868f9c9d3775254d4197f955c107a0ce3cb8"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-004.spec.json",
+     "sha256": "c93a359f9fb26808eb43ea887ae1ee10f9b0387220de45efba7b9313df369380"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-004",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate a6e3c6e3: vsmom {'lookback': 30, 'vol_window': 30} sign 1, top 60 liquid coins",
+   "signal": "volatility-scaled momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.78 (0.51 at doubled costs, max drawdown -34 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-005.json",
+     "sha256": "2d7b96e1cdd66fb57e3584e5ee70a16ad0e8b92f477413245c5ea8e3e0964911"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-005.spec.json",
+     "sha256": "ed0167498490489f903a9481ba9003c44b3508e909055676616a90cba9b20642"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-005",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 30e0e5e4: voltrend {'lookback': 14, 'volume_window': 60} sign 1, top 60 liquid coins",
+   "signal": "trend with volume confirmation, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.38 (0.00 at doubled costs, max drawdown -28 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-006.json",
+     "sha256": "c2776714e30ce300474b5ae1eb5d0a755f3ab91383bdd02b0b380e6dc60296ea"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-006.spec.json",
+     "sha256": "28fe338e3e6f13e2294557c5840cd7bc768c4d1df8a43313f2ae0fc2db84da30"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-006",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 5ca9f9d3: voltrend {'lookback': 5, 'volume_window': 60} sign 1, top 60 liquid coins",
+   "signal": "trend with volume confirmation, long-short, BTC-hedged (found by a search)",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.80 (0.25 at doubled costs, max drawdown -34 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-007.json",
+     "sha256": "cc5feb5cf8db1c3d2bacf358cc4ea9bcb3a0ec4fe9655ac674f91ceb9f4339f0"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-007.spec.json",
+     "sha256": "a89f2e8f9a744b7199a0a6e83489a572228506c00a40d0e7f4b76651af7f90a8"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-007",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate ff056945: hi {'window': 30} sign 1, top 30 liquid coins",
+   "signal": "distance to the recent high, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.06 (0.67 at doubled costs, max drawdown -28 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-008.json",
+     "sha256": "c592fdb9f948ceb95004d7023fffb454696032fa839625bf6be97ac4c9e0a98c"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-008.spec.json",
+     "sha256": "1ec90f86f59ad6faf8f235bda94f9df3143d1f5128f92c5506caf3bac9e716ae"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-008",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 75bb775f: comp_MLI {'parts': ['M', 'L', 'I']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (MLI), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe -0.14 (-0.26 at doubled costs, max drawdown -31 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-009.json",
+     "sha256": "f18e719342302ac9e9706ba0731747115d509bc8934ea46f670f6d3851aa8234"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-009.spec.json",
+     "sha256": "ef98768a5a8f4533b39ed996ed2e89769e6bd1a27e33151e90a63398026d23aa"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-009",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 1d13a6fc: comp_LHZ {'parts': ['L', 'H', 'Z']} sign 1, top 60 liquid coins",
+   "signal": "composite of cross-sectional scores (LHZ), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.25 (1.14 at doubled costs, max drawdown -29 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-010.json",
+     "sha256": "3d0218f6c67d1523d754b0dc8b2b9ad4fc953a45e63c56493a135c1907fdd2d1"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-010.spec.json",
+     "sha256": "eeff043d7750a4f2651a7cbcf76f891bcda5c313a3c444d30b5f64e0cf01d0a2"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-010",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 878e5333: mom {'lookback': 14, 'skip': 0} sign 1, top 60 liquid coins",
+   "signal": "momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe -0.03 (-0.38 at doubled costs, max drawdown -42 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-011.json",
+     "sha256": "a6d595ac4b36b7be235d25dd4c3160265396e91ddf0e4dbb27284b33c6f577da"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-011.spec.json",
+     "sha256": "3b408de84ff5a800148d0db216f90d3a31cd98f30407e21166366b098c284077"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-011",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 5319b885: comp_BH {'parts': ['B', 'H']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (BH), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.64 (0.55 at doubled costs, max drawdown -37 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-012.json",
+     "sha256": "24a282ba79740a48ba0533059a08866581818b6b33b1f675bd46d7d57747679b"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-012.spec.json",
+     "sha256": "9ed2e3ccc889f3b9a4eec5dfe7629ef8e1a5c7f2dd36b4d574354174054d256e"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-012",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate a401cfd2: resmom {'lookback': 30, 'beta_window': 90} sign 1, top 60 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.33 (0.06 at doubled costs, max drawdown -53 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-013.json",
+     "sha256": "20cdf98958c38cde09d1f98bc65c559960c03b3fb592d9811336caed0f4a7390"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-013.spec.json",
+     "sha256": "150f358ecaa7ea87f4f0f3184d35c1838dde7ffcfc38d6c74e80975e9673e412"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-013",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate b525736d: comp_VLH {'parts': ['V', 'L', 'H']} sign 1, top 60 liquid coins",
+   "signal": "composite of cross-sectional scores (VLH), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.72 (0.59 at doubled costs, max drawdown -39 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-014.json",
+     "sha256": "fc3363f221653c0d434be86d4eacfd5461d95aa14966b04c0b8cc4b523f32438"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-014.spec.json",
+     "sha256": "ee1d3b0701204aa46061c9b8471ceff893120d7a0a0692ddb0c43e4de68954ea"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-014",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate f8e6f47c: comp_ML {'parts': ['M', 'L']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (ML), long-short, BTC-hedged",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe 0.42 (0.27 at doubled costs, max drawdown -32 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-015.json",
+     "sha256": "b2c3078035feb2c3987e24d84054f5ab53dba99ea86d4b5932690e8e4e754d1a"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-015.spec.json",
+     "sha256": "1174b579888563ef3f80c745ca89fe3f16751b18de2bfcfb5ce33e89e18172de"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-015",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 1d322ac2: resmom {'lookback': 180, 'beta_window': 90} sign -1, top 30 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.15 (0.07 at doubled costs, max drawdown -48 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-016.json",
+     "sha256": "5eee942ec132c996631ce8991ec6c16157da10e7765589cdccda3fd77d797719"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-016.spec.json",
+     "sha256": "6ab23febe848785b5990ca2b6e62ef8e8f48c1c4c598a2b47595f1343b4dbd1e"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-016",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 6fb801b8: resmom {'lookback': 30, 'beta_window': 60} sign 1, top 60 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.25 (-0.15 at doubled costs, max drawdown -51 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-017.json",
+     "sha256": "df739676d85e58f1ddc9114bb117f022a587c7e908afb7b9e44832059fa77d0d"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-017.spec.json",
+     "sha256": "9d99a20d1e6b38a04e89980feb1fb3d3dfba5b679d231cdc432730ab61f5cb5c"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-017",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 192ad0ce: resmom {'lookback': 30, 'beta_window': 60} sign 1, top 60 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.28 (0.01 at doubled costs, max drawdown -49 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-018.json",
+     "sha256": "e8b4ac0015a528ca4275be49b13c2ea30b41593130772d39c20911485c510181"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-018.spec.json",
+     "sha256": "e6b40f01491cae624ec2ada8fc045cfaf880f894fe8bd380d6e857c0f1606d2d"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-018",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 68ed02db: comp_LHI {'parts': ['L', 'H', 'I']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (LHI), long-short, BTC-hedged",
+   "summary": "PASS_WITH_WARNINGS, ARL 3: validation net Sharpe 1.29 (1.08 at doubled costs, max drawdown -20 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-019.json",
+     "sha256": "5dda5a472496a8db0021b0ea3b275551aa6e21dde446e86561296db3d52f5572"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-019.spec.json",
+     "sha256": "b6067ce2dd9ab7794c34b8536b9786eed16d1cde35986e206bab840eb186d5fe"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-019",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 0994badf: comp_BHZ {'parts': ['B', 'H', 'Z']} sign 1, top 60 liquid coins",
+   "signal": "composite of cross-sectional scores (BHZ), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.34 (0.24 at doubled costs, max drawdown -40 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-020.json",
+     "sha256": "1040442ea92c163b491f619e5ed00eca7e3158cac88d527c0587264bff091cb3"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-020.spec.json",
+     "sha256": "bbbab59bc6497c5dff0497893f2edaa315c9c784ce7a0a242b69910850a8554d"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-020",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 2f7d69bd: hi52 {'window': 365, 'skip': 7} sign 1, top 30 liquid coins",
+   "signal": "52-week-high proximity, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.62 (0.49 at doubled costs, max drawdown -47 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-021.json",
+     "sha256": "975b39cfa303cad5f4132f6f3f09cdcc6142ac815c48610ace9d5545f1a1164a"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-021.spec.json",
+     "sha256": "b5cf4be97af5651dbe972fc3a4feb712e61579ad9faa252a38cd60f83e8ad4fd"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-021",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 278b3425: comp_MLB {'parts': ['M', 'L', 'B']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (MLB), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.83 (0.69 at doubled costs, max drawdown -23 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-022.json",
+     "sha256": "686703763d721680986f53d05961201d7c793e008c8a7b3ad9a7532521d57174"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-022.spec.json",
+     "sha256": "57a1ba966bade999a342dda4560f7543a22e76a4b7faa9e88f67b08a5f0d220e"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-022",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate e82a9495: resmom {'lookback': 180, 'beta_window': 90} sign -1, top 30 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe -0.05 (-0.15 at doubled costs, max drawdown -42 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 2,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-023.json",
+     "sha256": "01f67862fd824634d0e69633d5b72a35fb51ab906aed56a8e1510f8186cb11bb"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-023.spec.json",
+     "sha256": "74524313ea9dd8c918d40a7044557608024e1906b16adf3e2be889793aad5846"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-023",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate e8aa172c: comp_MLI {'parts': ['M', 'L', 'I']} sign 1, top 60 liquid coins",
+   "signal": "composite of cross-sectional scores (MLI), long-short, BTC-hedged",
+   "summary": "Rejected by Monte-Neo (ARL 2): validation net Sharpe -0.47 (-0.76 at doubled costs, max drawdown -54 %) against 0.78 for BTC buy and hold; failed the lab validation gate, holdout not opened. Not investment advice.",
+   "try": null,
+   "verdict": "REJECT"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-024.json",
+     "sha256": "7713ee179d5c8e7a30634713873d9eec85dd242ee689f64bc3b9f15af8e07e7e"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-024.spec.json",
+     "sha256": "50f01f58c77cca1301ecd6a4f8799366d5bf312b3278e51ae0a4b0151a7fe1b4"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-024",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate c3f413c5: comp_LHZ {'parts': ['L', 'H', 'Z']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (LHZ), long-short, BTC-hedged",
+   "summary": "PASS_WITH_WARNINGS, ARL 3: validation net Sharpe 1.01 (0.90 at doubled costs, max drawdown -28 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "PASS_WITH_WARNINGS"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-025.json",
+     "sha256": "581138b8ecca41b5a38cbc44fa2f8237867c187bf69bdebd06198c5cfa49c9f3"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-025.spec.json",
+     "sha256": "4691dc8a87f84cd10b95f985ed1b7908694a13b459331a93f5360caa97f3ffa1"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-025",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 18bcb0d1: comp_LHI {'parts': ['L', 'H', 'I']} sign 1, top 60 liquid coins",
+   "signal": "composite of cross-sectional scores (LHI), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 1.38 (1.17 at doubled costs, max drawdown -23 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-026.json",
+     "sha256": "f40bb7b06b78ff5a52436db90beb2806fafff5bfac1ba900bbced223d10ddc98"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-026.spec.json",
+     "sha256": "784f29545354ddffb62739b2c94c7e84764a631c04f1d6d2b8d0a27c8d8010ea"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-026",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 3decb49b: vsmom {'lookback': 30, 'vol_window': 30} sign 1, top 60 liquid coins",
+   "signal": "volatility-scaled momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.49 (0.09 at doubled costs, max drawdown -40 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-027.json",
+     "sha256": "35e1c6e079a2bbbf954ac8010d1571f2ba9ee95eca7ea6032893045c177f2303"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-027.spec.json",
+     "sha256": "8116e9d3d5582bb198ad67a4c82252c166db751281f58c3c405cabb572b5e458"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-027",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate f02299ee: comp_VH {'parts': ['V', 'H']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (VH), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.70 (0.43 at doubled costs, max drawdown -36 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-028.json",
+     "sha256": "eaa84e8fac9008f251da7bdfb0d704dc97a05da6c0016ce9d4a8279f2e46976d"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-028.spec.json",
+     "sha256": "3d0b167dffadc60ae34d2cdbd6087b105c1c850943a5aa45d565dea45fedd672"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-028",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 8b00f152: resmom {'lookback': 30, 'beta_window': 90} sign 1, top 60 liquid coins",
+   "signal": "residual momentum, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.24 (-0.17 at doubled costs, max drawdown -50 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-029.json",
+     "sha256": "2f7dd81c830d81c43f3c3eed9f871b03d02278beadcfc585e5c82cee97aeee3f"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-029.spec.json",
+     "sha256": "4f4a5cf10c52847efe32153a6f8c396897b87909c5f0907af43405c9aec47c85"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-029",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 747d0bb3: voltrend {'lookback': 14, 'volume_window': 60} sign 1, top 30 liquid coins",
+   "signal": "trend with volume confirmation, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.78 (0.47 at doubled costs, max drawdown -27 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-030.json",
+     "sha256": "889ca140c5b435b5e88b09e07c3113cf87d49681a73efdede225781206ceb6d1"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-030.spec.json",
+     "sha256": "8dba87cdaaa52d998dfd757fc1204eda5127674f7f359ac6980579059153e08b"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-030",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Search candidate 0ea5fa19: comp_VHZ {'parts': ['V', 'H', 'Z']} sign 1, top 30 liquid coins",
+   "signal": "composite of cross-sectional scores (VHZ), long-short, BTC-hedged",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.21 (-0.09 at doubled costs, max drawdown -32 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-031.json",
+     "sha256": "b12701146f3f9837141cf566faaca68d56edf6f796ed0137cebba22efd347520"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-031.spec.json",
+     "sha256": "a229e1cdbb5c0a34bb6d6beab3ac3b68170c34d716663251af1526e97f5848ea"
+    }
+   },
+   "gate_passed": true,
+   "id": "MN-XSM-CRY-031",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "PASSED_UNDER_PROTOCOL",
+   "name": "Search candidate 43d226ce: hi52 {'window': 200, 'skip': 0} sign 1, top 60 liquid coins",
+   "signal": "52-week-high proximity, long-short, BTC-hedged (found by a search)",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.65 (0.55 at doubled costs, max drawdown -35 %) against 0.78 for BTC buy and hold; passed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
+   "verdict": "NEEDS_MORE_EVIDENCE"
+  },
+  {
+   "arl": 3,
+   "asset_class": "crypto",
+   "data": {
+    "end": "2024-12-31",
+    "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+    "source": "binance-vision (data.binance.vision)",
+    "start": "2017-08-17"
+   },
+   "deploy": {
+    "binance_spot_testnet": false,
+    "why": "no public code in this record"
+   },
+   "files": {
+    "record": {
+     "path": "records/MN-XSM-CRY-032.json",
+     "sha256": "1ef1390ec4580c0b45b47ae2767459f6b125be391ba7ceadb7a626f3dbf6b7cc"
+    },
+    "spec": {
+     "path": "specs/MN-XSM-CRY-032.spec.json",
+     "sha256": "c19ae7b05ef2907fad8b0a6c6857de38feed2de094d971c001cf9631474eb717"
+    }
+   },
+   "gate_passed": false,
+   "id": "MN-XSM-CRY-032",
+   "importable": false,
+   "interfaces": [],
+   "ledger_status": "NEGATIVE_RESULT_UNDER_PROTOCOL",
+   "name": "Cross-sectional momentum, 10 USDT spot coins",
+   "signal": "cross-sectional momentum",
+   "summary": "NEEDS_MORE_EVIDENCE, ARL 3: validation net Sharpe 0.20 (0.14 at doubled costs, max drawdown -49 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+   "try": null,
    "verdict": "NEEDS_MORE_EVIDENCE"
   }
  ],

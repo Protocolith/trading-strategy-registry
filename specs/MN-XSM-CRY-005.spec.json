@@ -1,0 +1,30 @@
+{
+ "catalog_id": "MN-XSM-CRY-005",
+ "name": "Search candidate 30e0e5e4: voltrend {'lookback': 14, 'volume_window': 60} sign 1, top 60 liquid coins",
+ "rules": {
+  "universe": "645 USDT coins (list in strategy.py)",
+  "family": "search_voltrend",
+  "title": "Search candidate 30e0e5e4: voltrend {'lookback': 14, 'volume_window': 60} sign 1, top 60 liquid coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "grid_checked": {}
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r4_b1_3_30e0e5/strategy.py",
+  "sha256": "4ca2a5245e574b464579a573786e9c3f38f265e92cf66eb6aa8d3e0a34155cd7",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

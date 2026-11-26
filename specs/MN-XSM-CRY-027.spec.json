@@ -1,0 +1,30 @@
+{
+ "catalog_id": "MN-XSM-CRY-027",
+ "name": "Search candidate f02299ee: comp_VH {'parts': ['V', 'H']} sign 1, top 30 liquid coins",
+ "rules": {
+  "universe": "645 USDT coins (list in strategy.py)",
+  "family": "search_comp_VH",
+  "title": "Search candidate f02299ee: comp_VH {'parts': ['V', 'H']} sign 1, top 30 liquid coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 3
+ },
+ "params": {
+  "grid_checked": {}
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r4_b4_4_f02299/strategy.py",
+  "sha256": "b99cca950701cb11c11ce956cbcb97fc813103225c80be37b8a04e73a9e26beb",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

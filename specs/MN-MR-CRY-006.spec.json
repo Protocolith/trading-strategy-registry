@@ -1,0 +1,30 @@
+{
+ "catalog_id": "MN-MR-CRY-006",
+ "name": "Search candidate 1df4d9a2: rev {'lookback': 14} sign 1, top 60 liquid coins",
+ "rules": {
+  "universe": "645 USDT coins (list in strategy.py)",
+  "family": "search_rev",
+  "title": "Search candidate 1df4d9a2: rev {'lookback': 14} sign 1, top 60 liquid coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "grid_checked": {}
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r4_b3_3_1df4d9/strategy.py",
+  "sha256": "96b27bf01099314547a679bfcb3a20c8b995637d5fbf5253492ffc3afcb64758",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

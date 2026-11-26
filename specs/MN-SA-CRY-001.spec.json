@@ -1,0 +1,41 @@
+{
+ "catalog_id": "MN-SA-CRY-001",
+ "name": "Pairs: ETH vs BTC log-price spread (perpetuals)",
+ "rules": {
+  "universe": "perp: ETHUSDT, BTCUSDT; fund: ETHUSDT, BTCUSDT",
+  "family": "pairs",
+  "title": "Pairs: ETH vs BTC log-price spread (perpetuals)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "window": 90,
+  "entry": 2.0,
+  "exit": 0.5,
+  "grid_checked": {
+   "window": [
+    60,
+    90,
+    120
+   ],
+   "entry": [
+    1.5,
+    2.0,
+    2.5
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/pairs_btc_eth/strategy.py",
+  "sha256": "cd44fa142f93fe697b4771e7e28e54e098b5869c7d3882c3902218d8afe2d35b",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "catalog_id": "MN-FAC-CRY-005",
+ "name": "Search candidate c36c6b3e: bab {'window': 30} sign -1, top 60 liquid coins",
+ "rules": {
+  "universe": "645 USDT coins (list in strategy.py)",
+  "family": "search_bab",
+  "title": "Search candidate c36c6b3e: bab {'window': 30} sign -1, top 60 liquid coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "grid_checked": {}
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r4_b4_8_c36c6b/strategy.py",
+  "sha256": "42aec6abd4710f8702d01f4d6a7fe7e3660b3b19c64796e50ca592e22eff6020",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

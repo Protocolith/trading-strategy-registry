@@ -1,0 +1,38 @@
+{
+ "catalog_id": "MN-CAR-CRY-003",
+ "name": "Funding crowding: short coins with the highest trailing perpetual funding, long the lowest (BTC-hedged)",
+ "rules": {
+  "universe": "BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LTCUSDT, LINKUSDT, DOGEUSDT, DOTUSDT, AVAXUSDT, ATOMUSDT",
+  "family": "carry_signal",
+  "title": "Funding crowding: short coins with the highest trailing perpetual funding, long the lowest (BTC-hedged)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "lookback": 14,
+  "horizon": 7,
+  "grid_checked": {
+   "lookback": [
+    7,
+    14,
+    30
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r3_funding_crowding/strategy.py",
+  "sha256": "89067244fd63ab9e93bc0e37b75498cf499bc640b34728cede27b2b3e9a72e35",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

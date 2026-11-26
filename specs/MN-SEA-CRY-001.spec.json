@@ -1,0 +1,40 @@
+{
+ "catalog_id": "MN-SEA-CRY-001",
+ "name": "Turn-of-month seasonality, BTC",
+ "rules": {
+  "universe": "spot_BTCUSDT",
+  "family": "seasonality",
+  "title": "Turn-of-month seasonality, BTC",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "first": 28,
+  "last": 3,
+  "grid_checked": {
+   "first": [
+    27,
+    28,
+    29
+   ],
+   "last": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/turn_of_month_btc/strategy.py",
+  "sha256": "81d381b7161722a6770f386d9cd890df39e76533d7f707061ee2f0a0a21592b2",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

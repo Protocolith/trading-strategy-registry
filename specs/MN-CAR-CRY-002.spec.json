@@ -1,0 +1,35 @@
+{
+ "catalog_id": "MN-CAR-CRY-002",
+ "name": "Funding carry v2: long spot / short perpetual, 12 coins, per-coin costs",
+ "rules": {
+  "universe": "spot: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LTCUSDT, LINKUSDT, DOGEUSDT, DOTUSDT, AVAXUSDT, ATOMUSDT; perp: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LTCUSDT, LINKUSDT, DOGEUSDT, DOTUSDT, AVAXUSDT, ATOMUSDT; fund: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LTCUSDT, LINKUSDT, DOGEUSDT, DOTUSDT, AVAXUSDT, ATOMUSDT",
+  "family": "carry",
+  "title": "Funding carry v2: long spot / short perpetual, 12 coins, per-coin costs",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "lookback": 14,
+  "threshold": 0.0002,
+  "grid_checked": {
+   "lookback": [
+    7,
+    14,
+    30
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r2_carry_basket_v2/strategy.py",
+  "sha256": "f7df086a466e7a2ad08b3761dba494f4631290610e76071cb9e186d085ea8f5c",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}
