@@ -1,0 +1,39 @@
+{
+ "catalog_id": "MN-MR-CRY-003",
+ "name": "High-volume reversal: fade the 5-day move, stronger when volume is unusual (BTC-hedged)",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "mean_reversion",
+  "title": "High-volume reversal: fade the 5-day move, stronger when volume is unusual (BTC-hedged)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 5
+ },
+ "params": {
+  "lookback": 5,
+  "volume_window": 60,
+  "horizon": 5,
+  "grid_checked": {
+   "lookback": [
+    3,
+    5,
+    10
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r3_volume_reversal/strategy.py",
+  "sha256": "f249f70b3c6540af7ee3bda1f48aa61a4a7b949e0c5114b1d43109292d2a7bb3",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

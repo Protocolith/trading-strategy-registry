@@ -1,0 +1,38 @@
+{
+ "catalog_id": "MN-FAC-CRY-002",
+ "name": "Lottery effect: short coins with the largest recent daily jump, long the rest (BTC-hedged)",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "cross_section",
+  "title": "Lottery effect: short coins with the largest recent daily jump, long the rest (BTC-hedged)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "window": 30,
+  "horizon": 7,
+  "grid_checked": {
+   "window": [
+    14,
+    30,
+    60
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r3_max_lottery/strategy.py",
+  "sha256": "4dc3741d4fdad1852e2006ada4d19a53d1e2bb74d036da25df7cbb01bbf417b4",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

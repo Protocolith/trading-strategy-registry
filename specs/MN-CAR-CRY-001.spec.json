@@ -1,0 +1,40 @@
+{
+ "catalog_id": "MN-CAR-CRY-001",
+ "name": "Funding carry: long spot / short perpetual basket",
+ "rules": {
+  "universe": "spot: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT; perp: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT; fund: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT",
+  "family": "carry",
+  "title": "Funding carry: long spot / short perpetual basket",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "lookback": 7,
+  "threshold": 0.0002,
+  "grid_checked": {
+   "lookback": [
+    3,
+    7,
+    14
+   ],
+   "threshold": [
+    0.0001,
+    0.0002,
+    0.0004
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/funding_carry_basket/strategy.py",
+  "sha256": "012fb712fa305de0bbb7684c59bf913b58da16d4cf95c10f0c4d94a26fa22153",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

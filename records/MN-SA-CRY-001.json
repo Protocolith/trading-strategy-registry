@@ -1,0 +1,70 @@
+{
+ "schema_version": "strategy-evaluation/1",
+ "catalog_id": "MN-SA-CRY-001",
+ "visibility": "public",
+ "taxonomy": {
+  "return_source": "statistical arbitrage",
+  "signal": "pairs (ETH vs BTC log-price spread)",
+  "structure": "pair",
+  "asset_class": "crypto",
+  "instrument": "perpetual",
+  "horizon": "days to weeks",
+  "rules_version": "catalog-rules/1"
+ },
+ "protocol": {
+  "preregistration_sha256": "dac23fe41ab156dab541bdb52725a2d0bfac24a0c947d867dec119ed62909937",
+  "data_manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576",
+  "spec_sha256": null,
+  "n_trials": 164,
+  "splits": {
+   "discovery": "2017-08..2020-12",
+   "validation": "2021-01..2024-12",
+   "holdout": "2025-01.. (not opened)"
+  },
+  "holdout_opened": null
+ },
+ "evaluation": {
+  "verifier": "monte-neo",
+  "verifier_version": "0.57.0",
+  "arl_rules_version": "arl-rules/2",
+  "verdict": "NEEDS_MORE_EVIDENCE",
+  "arl_level": 1,
+  "arl_depth": 0,
+  "certificate_id": "4877dd9de92d643f",
+  "metrics": {
+   "validation_net_sharpe": 0.004,
+   "validation_deflated_sharpe": 0.004,
+   "validation_max_drawdown": -0.337,
+   "validation_beta_btc": -0.027,
+   "validation_beta_share_btc": 0.007,
+   "validation_alpha_t_vs_btc": 0.14,
+   "btc_buy_and_hold_sharpe": 0.782,
+   "discovery_net_sharpe": 0.581,
+   "validation_by_year_net_sharpe": {
+    "2021": -0.29,
+    "2022": -0.37,
+    "2023": 0.22,
+    "2024": 0.87
+   }
+  },
+  "gate": {
+   "name": "Strategy Lab validation gate",
+   "criteria": "not REJECT, positive net Sharpe also at doubled costs",
+   "passed": false
+  }
+ },
+ "outcome_summary": "NEEDS_MORE_EVIDENCE, ARL 1: validation net Sharpe 0.00 (doubled-cost Sharpe not computed for this strategy, max drawdown -34 %) against 0.78 for BTC buy and hold; failed the lab validation gate, this is not a holdout result, the holdout was not opened. Not investment advice.",
+ "notes": {
+  "planned_trials_at_preregistration": 83,
+  "preregistered_at": "2026-11-08T16:54:54.898568+00:00",
+  "validated_at": "2026-11-26T12:57:13+00:00",
+  "arl_provisional": true,
+  "n_trials_basis": "n_trials 164 is the Strategy Lab total used by the validation run; the pre-registration declared the planned_trials above",
+  "validation_run": "Monte-Neo v0.57.0 re-validation of the whole lab; discovery and validation windows only",
+  "evaluated_code": "the public strategy.py differs from the file evaluated in the lab only in its docstring (author line) and blank lines",
+  "data_note": "daily bars, fills at the next close, per-coin Binance fees + spread (VIP0), no funding on perpetual shorts, survivors-only universe",
+  "return_source": "statistical arbitrage",
+  "gate_note": "no doubled-cost Sharpe in the lab result; gate passed is the lab's recorded gate_open, not recomputed here"
+ },
+ "license": "CC-BY-4.0"
+}

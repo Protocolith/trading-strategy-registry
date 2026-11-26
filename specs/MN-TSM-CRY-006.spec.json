@@ -1,0 +1,41 @@
+{
+ "catalog_id": "MN-TSM-CRY-006",
+ "name": "Volatility-targeted trend, BTC",
+ "rules": {
+  "universe": "spot_BTCUSDT",
+  "family": "vol_target",
+  "title": "Volatility-targeted trend, BTC",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "window": 100,
+  "target": 0.4,
+  "vol_len": 30,
+  "grid_checked": {
+   "window": [
+    50,
+    100,
+    200
+   ],
+   "target": [
+    0.3,
+    0.4,
+    0.5
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/voltarget_trend_btc/strategy.py",
+  "sha256": "5ba19658e95361b07fa8dd5fbc22cc43492a08350eb9a2f43f753f82ec2c2f07",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

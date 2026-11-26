@@ -1,0 +1,35 @@
+{
+ "catalog_id": "MN-TSM-CRY-005",
+ "name": "Time-series momentum, BTC",
+ "rules": {
+  "universe": "spot_BTCUSDT",
+  "family": "trend",
+  "title": "Time-series momentum, BTC",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)"
+ },
+ "params": {
+  "lookback": 90,
+  "grid_checked": {
+   "lookback": [
+    60,
+    90,
+    120,
+    180
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/tsmom_btc/strategy.py",
+  "sha256": "2636b47d501d7391972ac67b7664d6d640641509f9db205abf8c84b83f579eff",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

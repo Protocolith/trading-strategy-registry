@@ -1,0 +1,38 @@
+{
+ "catalog_id": "MN-FAC-CRY-001",
+ "name": "Betting against beta: long low-beta, short high-beta coins (BTC-hedged)",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "cross_section",
+  "title": "Betting against beta: long low-beta, short high-beta coins (BTC-hedged)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "beta_window": 90,
+  "horizon": 7,
+  "grid_checked": {
+   "beta_window": [
+    60,
+    90,
+    150
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r3_bab_beta/strategy.py",
+  "sha256": "d5a7b4ebe63170fefba214a15d0c31c2919c40a71535a9c91475aed37b5c6f29",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

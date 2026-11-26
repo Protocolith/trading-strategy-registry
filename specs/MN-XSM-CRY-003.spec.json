@@ -1,0 +1,39 @@
+{
+ "catalog_id": "MN-XSM-CRY-003",
+ "name": "Long-term reversal: fade the 180-day loser/winner skipping the last month (BTC-hedged)",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "cross_section",
+  "title": "Long-term reversal: fade the 180-day loser/winner skipping the last month (BTC-hedged)",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 14
+ },
+ "params": {
+  "lookback": 180,
+  "skip": 30,
+  "horizon": 14,
+  "grid_checked": {
+   "lookback": [
+    120,
+    180,
+    270
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r3_longterm_reversal/strategy.py",
+  "sha256": "9d85d1193a5a3e17b4ab702b49a429274fb126c31a8c069b66c618b997fa2fc0",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

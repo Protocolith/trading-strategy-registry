@@ -1,0 +1,38 @@
+{
+ "catalog_id": "MN-MR-CRY-002",
+ "name": "Short-term mean reversion basket, long-short, 18 coins",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "mean_reversion",
+  "title": "Short-term mean reversion basket, long-short, 18 coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 3
+ },
+ "params": {
+  "lookback": 5,
+  "horizon": 3,
+  "grid_checked": {
+   "lookback": [
+    3,
+    5,
+    10
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r2_mean_reversion_basket/strategy.py",
+  "sha256": "26c1c3fa86dd0853a4b09c16f5026773b059b8b8ef1dbf4bb0b8f2ba08e3aa2a",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}

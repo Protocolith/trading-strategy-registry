@@ -1,0 +1,40 @@
+{
+ "catalog_id": "MN-XSM-CRY-002",
+ "name": "BTC-neutral residual momentum, long-short, 18 coins",
+ "rules": {
+  "universe": "18 USDT coins (list in strategy.py)",
+  "family": "market_neutral",
+  "title": "BTC-neutral residual momentum, long-short, 18 coins",
+  "execution": "daily bars; fills at the next close; per-coin Binance fees and spread (VIP0)",
+  "portfolio": "long_short",
+  "hedge_btc": true,
+  "horizon": 7
+ },
+ "params": {
+  "lookback": 60,
+  "skip": 1,
+  "beta_window": 90,
+  "horizon": 7,
+  "grid_checked": {
+   "lookback": [
+    30,
+    60,
+    90
+   ]
+  }
+ },
+ "public_code": {
+  "repository": "https://github.com/NeoZorK/Monte-Neo",
+  "ref": "v0.57.0",
+  "path": "examples/strategies/r2_resid_mom_neutral/strategy.py",
+  "sha256": "83c05571ed896636e1cb4b41b364317bec9fa51113ae6958f8a58f30d5ff1951",
+  "license": "MIT",
+  "note": "not copied into this registry; key is public_code (not code) because the file lives in Monte-Neo"
+ },
+ "data": {
+  "source": "binance-vision (data.binance.vision)",
+  "start": "2017-08-17",
+  "end": "2024-12-31",
+  "manifest_sha256": "4716aa00d399808174cb451e20ef4464a768272d37bf696a4eff532440355576"
+ }
+}
