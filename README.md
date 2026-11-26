@@ -37,6 +37,22 @@ If this is useful, a star on [Monte-Neo](https://github.com/NeoZorK/Monte-Neo) a
 | [MN-TSM-CRY-001](records/MN-TSM-CRY-001.json) | Donchian channel basket, 18 crypto spot pairs | PASS_WITH_WARNINGS, ARL 5 | holdout 2025-01..2026-10, net Sharpe at 2x costs > 0 | **failed** (Sharpe -0.06 at 2x costs) |
 | [MN-ALC-MLT-001](records/MN-ALC-MLT-001.json) | Multi-asset ETF book: trend, risk parity, bond trend-carry | NEEDS_MORE_EVIDENCE (returns only) | holdout 2021-01..2026-11, net Sharpe at 2x costs >= 0.30, max DD >= -20 % | **passed** (Sharpe 0.70 at 2x costs, max DD -4.1 %, 2.4 % a year) |
 
+## Strategy Lab results under Monte-Neo v0.57.0 (55 records)
+
+Every public strategy of the Monte-Neo Strategy Lab (code in `examples/strategies/` of Monte-Neo, tag `v0.57.0`) re-validated
+with Monte-Neo 0.57.0 under `arl-rules/2`, with the lab-wide trial count (`n_trials` = 164). Validation window only
+(2021-01..2024-12); the sealed holdout (2025-01 on) was **not** opened for any of them. Each record is frozen and recorded on the
+ledger with the hashes of its spec, record, public code and data manifest.
+
+- Verdicts: NEEDS_MORE_EVIDENCE 36, REJECT 14, PASS_WITH_WARNINGS 5.
+- ARL: level 1: 3, level 2: 14, level 3: 38. No strategy reaches level 4: after paying for 164 trials no
+  signal is significant (`timing_significance`, `selection_adjusted_sharpe`).
+- Lab validation gate (not REJECT and positive net Sharpe also at doubled costs): 29 passed, 26 failed. A passed gate
+  is not a holdout result and not evidence of a tradable edge.
+
+The records are in `records/` (ids `MN-<category>-CRY-NNN`), the list with ledger status in `index.json`. The code is not copied
+here: each spec's `public_code` names the Monte-Neo file and its SHA-256 at `v0.57.0`.
+
 ## What is stored
 
 Not code and not market data. Each entry is a **reproducible experiment**:
